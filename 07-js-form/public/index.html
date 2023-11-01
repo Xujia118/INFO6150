@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="script.js"></script>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="logo-container">
+          <img
+            class="logo-image"
+            src="http://placekitten.com/60"
+            alt="kitten with blurred backdrop"
+          />
+          <h2 class="logo-text">WorldEnglish</h2>
+        </div>
+
+        <div class="nav-menu-container">
+          <nav class="nav-menu">
+            <button class="nav-menu-button" type="button">
+              <i class="gg-menu-boxed"></i>
+            </button>
+            <ul class="header-menu">
+              <li class="menu-item">
+                <a class="item-link" href="./home.html">Home</a>
+              </li>
+              <li class="menu-item">
+                <a class="item-link" href="./about_us.html">About</a>
+              </li>
+              <li class="menu-item">
+                <a class="item-link" href="./courses.html">Courses</a>
+              </li>
+              <li class="menu-item">
+                <a class="item-link" href="./reviews.html">Reviews</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-search-container">
+          <a href="./search.html"><i class="gg-search"></i></a>
+        </div>
+
+        <div class="header-CTA-container">
+          <a class="header-CTA-button" href="./sign_in.hmtl">SIGN IN</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-wrapper">
+        <form class="register" action="/register" method="POST">
+          <div class="form-title-container">
+            <h1 class="form-title">Sign Up</h1>
+          </div>
+
+          <div class="indication-container">
+            <p class="indcation">
+              <em class="asterisk">*</em> Indicates a required field
+            </p>
+          </div>
+
+          <div class="field-container">
+            <label class="field-label" for="form-name"
+              ><span><em class="asterisk">*</em> Name:</span></label
+            >
+            <span class="field-required off" id="name-required"
+              >Please enter your name</span
+            >
+            <input
+              class="field-input"
+              id="form-name"
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+          </div>
+
+          <div class="field-container">
+            <label class="field-label" for="form-email"
+              ><span><em class="asterisk">*</em> Email:</span></label
+            >
+            <span class="field-required" id="email-required"></span>
+            <input
+              class="field-input"
+              id="form-email"
+              type="text"
+              name="email"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="field-container" id="form-email-check">
+            <label class="field-label" for="confirm-email"
+              ><span><em class="asterisk">*</em> Confirm Email:</span></label
+            >
+            <span class="field-required" id="confirm-email-required"></span>
+            <input
+              class="field-input"
+              type="text"
+              name="confirm-email"
+              id="confirm-email"
+              placeholder="Confirm email"
+            />
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" name="wants-spam" id="wants-spam"/>
+            <label for="wants-spam">Receive Newsletter</label>
+          </div>
+
+          <div class="dropbox-container">
+            <label for="subscription">Membership</label>
+            <select name="tier" id="subscription">
+              <option value="">[Please select]</option>
+              <option value="1 Month Subscription">1 Month Subscription</option>
+              <option value="3 Months Subscription">3 Months Subscription</option>
+              <option value="6 Months Subscription">6 Months Subscription</option>
+            </select>
+          </div>
+
+          <div class="button-container">
+            <button class="submit-button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <ul class="footer-menu">
+          <li class="menu-item">
+            <a class="item-link" href="./policy.html">Privacy Policy</a>
+          </li>
+          <li class="menu-item">
+            <a class="item-link" href="./careers.html">Careers</a>
+          </li>
+          <li class="menu-item">
+            <a class="item-link" href="./contact.html">Contact Us</a>
+          </li>
+          <li class="menu-item">
+            <a class="item-link" href="./partners.html">Partners</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

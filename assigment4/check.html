@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="check.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sign up</h1>
+      <p>It's quick and easy.</p>
+    </header>
+    <hr />
+    <main>
+      <form action="submit" method="POST">
+        <fieldset class="register_field">
+          <legend>Please register</legend>
+
+          <section class="main-container">
+            <div class="field_container">
+              <label class="indication">
+                <em class="asterik">*</em> Indicates a required field
+              </label>
+            </div>
+
+            <div class="field_container">
+              <label for="name">Name<em class="asterik">*</em></label>
+              <input
+                id="name"
+                name="name"
+                placeholder="Name"
+                type="text"
+                required
+              />
+            </div>
+
+            <div class="field_container">
+              <label for="email">Email<em class="asterik">*</em></label>
+              <input
+                id="email"
+                name="email"
+                placeholder="Email"
+                type="email"
+                required
+              />
+            </div>
+
+            <div class="field_container">
+              <label class="checkbox-label" for="annoy_me"
+                >Do you want us to send you annoying emails?</label
+              >
+              <input
+                class="checkbox-input"
+                id="annoy_me"
+                name="annoy_me"
+                type="checkbox"
+                checked
+              />
+            </div>
+
+            <div class="field_container">
+              <label class="dropbox" for="tier"
+                >Select Tier<em class="asterik">*</em></label
+              >
+              <select class="dropbox" name="tier" id="tier" required>
+                <option value="">[Please select]</option>
+                <option value="1">Silver Tier</option>
+                <option value="2">Gold Tier</option>
+                <option value="3">Platinum Tier</option>
+              </select>
+            </div>
+
+            <div class="submitButton-container">
+              <button class="submit-button" type="submit">Register</button>
+            </div>
+          </section>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>By signing up, you agree to our <a href="">privacy policy.</a></p>
+    </footer>
+  </body>
+</html>

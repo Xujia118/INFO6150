@@ -1,0 +1,247 @@
+html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    line-height: 1.6rem;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-background-color: black;
+    --footer-background-color: black;
+
+    --header-font-color: white;
+    --footer-font-color: white;
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+}
+
+.header-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu-button {
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+
+    border: none;
+
+    font-size: 1rem;
+
+    background-color: transparent;
+}
+
+.nav-menu-button:hover {
+    cursor: pointer;
+
+    text-decoration: underline;
+}
+
+.submenu {
+    position: absolute;
+
+    background-color: var(--header-background-color);
+
+    padding: 0;
+    
+    rotate: x 90deg;
+    transform-origin: top;
+    
+    overflow: hidden;
+    
+    list-style: none;
+    
+    z-index: 1;
+}
+
+.submenu.open {
+    rotate: x 0deg;
+}
+
+@media(prefers-reduced-motion: no-preference) {
+    .submenu {
+        transition-duration: 0.3s;
+    }
+}
+
+.submenu-item {
+    padding: 0.5rem;
+}
+
+.submenu-link {
+    color: var(--header-font-color);
+
+    text-decoration: none;
+}
+
+.submenu-link:hover {
+    text-decoration: underline;
+}
+
+.book-link {
+    background-color: var(--header-font-color);
+    color: var(--header-background-color);
+    
+    text-decoration: none;
+
+    border: 2px solid black;
+
+    padding: 0.3rem 1rem;
+
+    transition-duration: 0.3s;
+}
+
+.book-link:hover {
+    background-color: rgb(187, 187, 187);
+}
+
+.book-link:active {
+    box-shadow: 0 0 0 2px white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+}
+
+.main-wrapper {
+    padding: 4rem 1rem;
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+}
+
+.card {
+    grid-column: span 12;
+
+    display: grid;
+
+    box-shadow: 3px 3px 5px gray;
+}
+
+.card:hover {
+    transform: 
+        translateY(-5px)
+        scale(1.02);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .card {
+        transition-duration: 0.3s;
+    }
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    margin: 0 1rem;
+}
+
+.card-button-container {
+    display: flex;
+    justify-content: center;
+
+    margin: 1rem;
+}
+
+.card-button {
+    display: inline-block;
+
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+    
+    text-decoration: none;
+    
+    padding: 0.3rem 1.5rem;
+
+    font-size: 1rem;
+
+    transition-duration: 0.4s;
+
+    border: 2px solid black;
+}
+
+.card-button:hover,
+.card-button:focus {
+    background-color: inherit;
+
+    color: inherit;
+}
+
+.footer-wrapper {
+    background-color: var(--footer-background-color);
+    color: var(--footer-font-color);
+
+    padding: 2rem;
+}
+
+.footer-menu-container {
+    margin: 2rem;
+}
+
+.footer-address {
+    margin: 0;
+}
+
+.footer-menu {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu-item {
+    list-style: none;
+}
+
+.footer-menu-link, .mail-link {
+    color: var(--footer-font-color);
+
+    text-decoration: none;
+}
+
+.footer-menu-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mail-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (min-width: 50rem) {
+    .card {
+        grid-column: span 4;
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-menu-container {
+        grid-column: span 1;
+    }
+
+    .footer-menu {
+        line-height: 2rem;
+    }
+}
